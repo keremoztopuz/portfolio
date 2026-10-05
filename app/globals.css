@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* Dark styles apply when the inline theme script sets data-theme="dark". */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Design tokens: see design-system/portfolio/MASTER.md */
+:root {
+  --bg: #fafaf9;
+  --surface: #f4f4f5;
+  --fg: #18181b;
+  --muted: #52525b;
+  --border: #e4e4e7;
+  --accent: #1d4ed8;
+  color-scheme: light;
+}
+
+/* Without JavaScript, follow the system setting. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c0c0e;
+    --surface: #161618;
+    --fg: #f4f4f5;
+    --muted: #a1a1aa;
+    --border: #27272a;
+    --accent: #93c5fd;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0c0c0e;
+  --surface: #161618;
+  --fg: #f4f4f5;
+  --muted: #a1a1aa;
+  --border: #27272a;
+  --accent: #93c5fd;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Keeps anchored section headings clear of the sticky header. */
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* One gentle fade on first load; reduced-motion users get it instantly. */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.5s ease-out both;
+}
