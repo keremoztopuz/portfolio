@@ -44,12 +44,6 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
             <p className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm">
               <ExternalLink href={profile.github}>GitHub</ExternalLink>
               <ExternalLink href={profile.linkedin}>LinkedIn</ExternalLink>
-              <a
-                href={`mailto:${profile.email}`}
-                className="underline decoration-border underline-offset-4 transition-colors duration-200 hover:text-accent hover:decoration-accent"
-              >
-                {profile.email}
-              </a>
             </p>
           </div>
         </section>
@@ -103,15 +97,9 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
         <Section id="contact" index="05" title={dict.contact.title}>
           <p className="max-w-[60ch] text-muted">{dict.contact.text}</p>
-          <a
-            href={`mailto:${profile.email}`}
-            className="mt-6 inline-block text-2xl font-semibold tracking-tight underline decoration-border decoration-1 underline-offset-8 transition-colors duration-200 hover:text-accent hover:decoration-accent sm:text-3xl break-all"
-          >
-            {profile.email}
-          </a>
-          <p className="mt-6 flex gap-6 text-sm">
-            <ExternalLink href={profile.github}>GitHub</ExternalLink>
+          <p className="mt-6 flex flex-wrap gap-x-10 gap-y-3 text-2xl font-semibold tracking-tight sm:text-3xl">
             <ExternalLink href={profile.linkedin}>LinkedIn</ExternalLink>
+            <ExternalLink href={profile.github}>GitHub</ExternalLink>
           </p>
         </Section>
       </main>

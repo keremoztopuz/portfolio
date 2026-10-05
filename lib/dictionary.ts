@@ -46,7 +46,7 @@ const en = {
   },
   contact: {
     title: "Contact",
-    text: "I'm looking for a junior role and I'm open to freelance work. Email is the quickest way to reach me.",
+    text: "I'm looking for a junior role and I'm open to freelance work. The quickest way to reach me is LinkedIn.",
   },
 };
 
@@ -97,7 +97,7 @@ const tr: Dictionary = {
   },
   contact: {
     title: "İletişim",
-    text: "Junior bir pozisyon arıyorum, freelance işlere de açığım. Bana en hızlı e-postayla ulaşırsın.",
+    text: "Junior bir pozisyon arıyorum, freelance işlere de açığım. Bana en hızlı LinkedIn'den ulaşırsın.",
   },
 };
 

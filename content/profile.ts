@@ -2,7 +2,6 @@ import type { Localized } from "@/lib/i18n";
 
 export const profile = {
   name: "Berat Kerem Öztopuz",
-  email: "keremoztopuzzz@gmail.com",
   github: "https://github.com/keremoztopuz",
   linkedin: "https://www.linkedin.com/in/keremoztopuz",
 };
