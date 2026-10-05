@@ -21,12 +21,12 @@ export const experience: Job[] = [
     year: "2026",
     points: {
       en: [
-        "Built Wraith's storefront application end to end in a two-person team.",
-        "Designed the UX, turned it into a design system and applied it across the app as reusable UI components.",
+        "Two of us built Wraith's storefront app from start to finish.",
+        "I designed the UX, then turned it into a design system of reusable components that the whole app uses.",
       ],
       tr: [
-        "Wraith'in mağaza uygulamasını iki kişilik ekipte baştan sona geliştirdim.",
-        "UX'i tasarlayıp bir tasarım sistemine dönüştürdüm ve uygulama genelinde yeniden kullanılabilir bileşenler olarak uyguladım.",
+        "Wraith'in mağaza uygulamasını iki kişi baştan sona yaptık.",
+        "UX'i tasarladım, sonra bunu uygulamanın her yerinde kullanılan, tekrar kullanılabilir bileşenlerden oluşan bir tasarım sistemine çevirdim.",
       ],
     },
   },
@@ -36,12 +36,12 @@ export const experience: Job[] = [
     year: "2023",
     points: {
       en: [
-        "Built a real-time temperature and humidity monitoring system in a team of three.",
-        "Designed Flask REST endpoints with request validation, and a JavaScript front end that visualises the sensor data.",
+        "Three of us built a system that monitors temperature and humidity in real time.",
+        "I wrote Flask REST endpoints that validate incoming requests, and the JavaScript frontend that shows the sensor data.",
       ],
       tr: [
-        "Üç kişilik ekipte gerçek zamanlı sıcaklık ve nem izleme sistemi geliştirdim.",
-        "İstek doğrulamalı Flask REST endpoint'leri ve sensör verisini görselleştiren bir JavaScript arayüzü yazdım.",
+        "Üç kişi, sıcaklık ve nemi gerçek zamanlı izleyen bir sistem geliştirdik.",
+        "Gelen istekleri doğrulayan Flask REST endpoint'lerini ve sensör verisini gösteren JavaScript arayüzünü yazdım.",
       ],
     },
   },
@@ -56,11 +56,11 @@ export const skills: SkillGroup[] = [
   },
   {
     label: { en: "ML & AI", tr: "ML & AI" },
-    items: ["PyTorch", "ConvNeXt", "PatchCore", "Grad-CAM", "CoreML", "CUDA"],
+    items: ["PyTorch", "MLflow", "ConvNeXt", "PatchCore", "Grad-CAM", "CoreML", "CUDA"],
   },
   {
     label: { en: "Backend & Data", tr: "Backend & Veri" },
-    items: ["FastAPI", "Flask", "REST APIs", "PostgreSQL", "Pydantic", "Postman"],
+    items: ["FastAPI", "Flask", "REST APIs", "PostgreSQL", "Postman"],
   },
   {
     label: { en: "Cloud & DevOps", tr: "Cloud & DevOps" },

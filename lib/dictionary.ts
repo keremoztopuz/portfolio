@@ -3,9 +3,9 @@ import type { Locale } from "./i18n";
 // Interface strings. Content (projects, experience) lives in content/.
 const en = {
   meta: {
-    title: "Berat Kerem Öztopuz — Computer Engineer",
+    title: "Berat Kerem Öztopuz · Computer Engineer",
     description:
-      "Computer engineer working on machine learning, backend systems and games. Projects, experience and skills.",
+      "Computer engineer in Ankara working on machine learning, backend and games.",
   },
   nav: {
     work: "Work",
@@ -18,9 +18,10 @@ const en = {
   },
   intro: {
     role: "Computer Engineer",
-    focus: "Machine learning, backend & games",
+    focus: "ML, Backend and Game Development",
     location: "Ankara, Türkiye",
-    bio: "I build things end to end: training models in PyTorch and shipping them behind tested, reproducible pipelines and APIs, writing iOS apps in SwiftUI, and making 3D games in Unity.",
+    photoAlt: "Portrait of Berat Kerem Öztopuz",
+    bio: "I train models in PyTorch and put them into production with tested, reproducible pipelines and APIs. I also write iOS apps in SwiftUI and make 3D games in Unity.",
   },
   work: {
     title: "Selected work",
@@ -45,18 +46,17 @@ const en = {
   },
   contact: {
     title: "Contact",
-    text: "Open to junior roles and freelance work. The fastest way to reach me is email.",
+    text: "I'm looking for a junior role and I'm open to freelance work. Email is the quickest way to reach me.",
   },
-  footer: { built: "Built with Next.js and Tailwind CSS." },
 };
 
 export type Dictionary = typeof en;
 
 const tr: Dictionary = {
   meta: {
-    title: "Berat Kerem Öztopuz — Bilgisayar Mühendisi",
+    title: "Berat Kerem Öztopuz · Bilgisayar Mühendisi",
     description:
-      "Makine öğrenmesi, backend sistemleri ve oyunlar üzerinde çalışan bilgisayar mühendisi. Projeler, deneyim ve yetenekler.",
+      "Ankara'da makine öğrenmesi, backend ve oyun üzerine çalışan bilgisayar mühendisi.",
   },
   nav: {
     work: "Projeler",
@@ -69,9 +69,10 @@ const tr: Dictionary = {
   },
   intro: {
     role: "Bilgisayar Mühendisi",
-    focus: "Makine öğrenmesi, backend ve oyun",
+    focus: "ML, Backend and Game Development",
     location: "Ankara, Türkiye",
-    bio: "İşleri baştan sona çıkarıyorum: PyTorch ile model eğitip test edilmiş, tekrarlanabilir pipeline ve API'lerle yayına almak, SwiftUI ile iOS uygulamaları yazmak ve Unity ile 3D oyunlar geliştirmek.",
+    photoAlt: "Berat Kerem Öztopuz'un portresi",
+    bio: "PyTorch ile model eğitiyor, bunları test edilmiş, tekrarlanabilir pipeline'lar ve API'lerle yayına alıyorum. Bunun yanında SwiftUI ile iOS uygulamaları yazıyor, Unity ile 3D oyunlar yapıyorum.",
   },
   work: {
     title: "Seçili projeler",
@@ -96,9 +97,8 @@ const tr: Dictionary = {
   },
   contact: {
     title: "İletişim",
-    text: "Junior pozisyonlara ve freelance işlere açığım. Bana en hızlı e-posta ile ulaşabilirsin.",
+    text: "Junior bir pozisyon arıyorum, freelance işlere de açığım. Bana en hızlı e-postayla ulaşırsın.",
   },
-  footer: { built: "Next.js ve Tailwind CSS ile yapıldı." },
 };
 
 const dictionaries: Record<Locale, Dictionary> = { en, tr };

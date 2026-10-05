@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { profile } from "@/content/profile";
 import { locales } from "@/lib/i18n";
 
-export const alt = "Berat Kerem Öztopuz — Computer Engineer";
+export const alt = "Berat Kerem Öztopuz · Computer Engineer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -31,7 +31,7 @@ export default function Image() {
           {profile.name}
         </div>
         <div style={{ fontSize: 36, color: "#52525b", marginTop: 12 }}>
-          Machine learning, backend & games
+          ML, Backend and Game Development
         </div>
       </div>
     ),

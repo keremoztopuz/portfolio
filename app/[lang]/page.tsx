@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { ExternalLink } from "@/components/ExternalLink";
@@ -7,6 +8,7 @@ import { experience, profile, skills } from "@/content/profile";
 import { projects } from "@/content/projects";
 import { getDictionary } from "@/lib/dictionary";
 import { hasLocale } from "@/lib/i18n";
+import portrait from "@/assets/kerem.jpg";
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
@@ -20,7 +22,17 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <main id="main" className="mx-auto max-w-5xl px-4 sm:px-6">
         {/* Intro */}
         <section id="top" className="fade-in grid gap-8 py-20 md:grid-cols-12 md:py-32">
-          <div className="md:col-span-9 md:col-start-4">
+          <div className="md:col-span-3">
+            <Image
+              src={portrait}
+              alt={dict.intro.photoAlt}
+              preload
+              placeholder="blur"
+              sizes="(min-width: 768px) 220px, 128px"
+              className="aspect-[4/5] w-32 rounded-sm object-cover md:w-full"
+            />
+          </div>
+          <div className="md:col-span-9">
             <p className="font-mono text-xs text-muted">
               {dict.intro.role} · {dict.intro.location}
             </p>
@@ -80,7 +92,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
         <Section id="education" index="04" title={dict.education.title}>
           <div className="grid gap-2 sm:grid-cols-[4rem_1fr] sm:gap-6">
-            <p className="font-mono text-xs text-muted sm:pt-1">2021–26</p>
+            <p className="font-mono text-xs text-muted sm:pt-1">2021-26</p>
             <div>
               <h3 className="font-semibold tracking-tight">{dict.education.degree}</h3>
               <p className="text-muted">{dict.education.school}</p>
@@ -104,9 +116,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         </Section>
       </main>
 
-      <footer className="mx-auto flex max-w-5xl flex-wrap justify-between gap-2 border-t border-border px-4 py-8 font-mono text-xs text-muted sm:px-6">
+      <footer className="mx-auto max-w-5xl border-t border-border px-4 py-8 font-mono text-xs text-muted sm:px-6">
         <p>© {new Date().getFullYear()} {profile.name}</p>
-        <p>{dict.footer.built}</p>
       </footer>
     </>
   );

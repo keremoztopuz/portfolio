@@ -16,7 +16,7 @@ export function ProjectRow({ project, lang, labels }: Props) {
       <p className="font-mono text-xs text-muted sm:pt-1">{project.year}</p>
       <div>
         <h3 className="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-lg font-semibold tracking-tight">
-          {project.title[lang]}
+          {project.title}
           {project.featured && (
             <span className="font-mono text-[11px] font-normal uppercase tracking-wider text-accent">
               {labels.featured}
